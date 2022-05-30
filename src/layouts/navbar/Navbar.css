@@ -73,14 +73,17 @@ a:hover {
   .SideBar {
     position: fixed;
     margin-top: var(--navbar-height);
-    background-color: var(--main-bg-color);
+    background-color: rgb(0, 0, 0, 0.2);
     width: 200px;
     height: 100vh;
     text-align: start;
     padding-left: 2%;
     padding-top: 2%;
-    /* margin-left: -200px;
-    transition: all 2s;
-    transform: translateX(200px); */
+    margin-left: calc(-200px - 2%);
+    transition-duration: 0.25s;
+  }
+
+  .move {
+    transform: translateX(calc(200px + 2%));
   }
 }

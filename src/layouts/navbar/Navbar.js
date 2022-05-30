@@ -32,7 +32,7 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showSideBar: false
+      sideBarClass: 'SideBar'
     }
     this.updateState = this.updateState.bind(this)
   }
@@ -40,17 +40,16 @@ class Navbar extends Component {
 
   updateState() {
     this.setState({
-      showSideBar: !this.state.showSideBar
+      sideBarClass: this.state.sideBarClass === 'SideBar' ? 'SideBar move' : 'SideBar'
     })
   }
 
   render() {
     return (
       <div className="Navbar">
-        {this.state.showSideBar ?
-          <div className='SideBar'>
-            {routes.map((route, i) => <a key={i} href={route.path}>{route.name}</a>)}
-          </div> : ''}
+        <div className={this.state.sideBarClass}>
+          {routes.map((route, i) => <a key={i} href={route.path}>{route.name}</a>)}
+        </div>
         <div className='Links'>
           <div className='Routes'>
             {routes.map((route, i) => <a key={i} href={route.path}>{route.name}</a>)}
