@@ -1,0 +1,86 @@
+.Navbar {
+  height: var(--navbar-height);
+}
+
+.Links {
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.2);
+  height: var(--navbar-height);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Routes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  margin-left: 2%;
+}
+
+.Routes img {
+  display: none;
+  width: 25px;
+  cursor: pointer;
+}
+
+.Routes img:hover {
+  opacity: 0.8;
+}
+
+.Contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  margin-right: 2%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.Contact a img {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  a {
+    font-size: 18px;
+  }
+
+  .Routes a {
+    display: none;
+  }
+
+  .SideBar a {
+    display: inherit;
+  }
+
+  .Routes img {
+    display: block;
+  }
+
+  .SideBar {
+    position: fixed;
+    margin-top: var(--navbar-height);
+    background-color: var(--main-bg-color);
+    width: 200px;
+    height: 100vh;
+    text-align: start;
+    padding-left: 2%;
+    padding-top: 2%;
+    /* margin-left: -200px;
+    transition: all 2s;
+    transform: translateX(200px); */
+  }
+}

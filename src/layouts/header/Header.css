@@ -1,0 +1,41 @@
+.Header {
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  height: 100%;
+}
+
+.name {
+  font-size: 65px;
+  color: white;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 18em;
+  width: 18em;
+}
+
+@media only screen and (max-width: 600px) {
+  .name-avatar {
+    flex-direction: column;
+  }
+
+  .name {
+    font-size: 45px;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    height: 14em;
+    width: 14em;
+  }
+}

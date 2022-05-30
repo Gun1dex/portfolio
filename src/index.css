@@ -1,5 +1,31 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Stencil Std, fantasy;
+  --navbar-height: 80px;
+  --main-bg-color: #CCC;
+  --header-linear-gradient: linear-gradient(#004d88, var(--main-bg-color));
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    --navbar-height: 50px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+}
+
+/* Flex */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
